@@ -1,0 +1,18 @@
+# User configuration — never commit! (copy from shared/user_config.h.example)
+shared/user_config.h
+
+# PlatformIO build artifacts
+.pio/
+bedroom/.pio/
+kitchen/.pio/
+.pioenvs/
+.piolibdeps/
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# macOS
+.DS_Store
+**/.DS_Store

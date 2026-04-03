@@ -1,0 +1,53 @@
+#pragma once
+
+// =============================================================================
+// BULLETPROOF WAKEUP — User Configuration
+//
+// Copy this file to user_config.h and fill in your values:
+//   cp shared/user_config.h.example shared/user_config.h
+//
+// user_config.h is listed in .gitignore and will NOT be committed.
+// =============================================================================
+
+// ─────────────────────────────────────────────────────────────────────────────
+// WiFi credentials (used by the kitchen device)
+// ─────────────────────────────────────────────────────────────────────────────
+#define WIFI_SSID     "your-wifi-network-name"
+#define WIFI_PASSWORD "your-wifi-password"
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Device MAC addresses
+//
+// How to find the MAC addresses:
+//   STEP 1: Flash each device (see README for flashing instructions)
+//   STEP 2: Open the Serial Monitor at 115200 baud
+//   STEP 3: Read the lines:
+//             [KITCHEN] MAC: AA:BB:CC:DD:EE:FF
+//             [BEDROOM] MAC: AA:BB:CC:DD:EE:FF
+//   STEP 4: Enter the hex bytes below
+// ─────────────────────────────────────────────────────────────────────────────
+#define KITCHEN_MAC { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
+#define BEDROOM_MAC { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ESP-NOW channel
+//
+// Must match your router's WiFi channel. Flash the kitchen device first,
+// open Serial Monitor and read: "[KITCHEN] Router channel: X"
+// Common values: 1, 6, or 11
+// ─────────────────────────────────────────────────────────────────────────────
+#define ESPNOW_CHANNEL 6
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Timezone (POSIX format)
+//
+// Examples:
+//   Europe/Zurich (CET/CEST): "CET-1CEST,M3.5.0,M10.5.0/3"
+//   UTC:                       "UTC0"
+//   US Eastern (ET):           "EST5EDT,M3.2.0,M11.1.0"
+//   US Pacific (PT):           "PST8PDT,M3.2.0,M11.1.0"
+//   UK (GMT/BST):              "GMT0BST,M3.5.0/1,M10.5.0"
+//
+// Full list: https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
+// ─────────────────────────────────────────────────────────────────────────────
+#define TIMEZONE "CET-1CEST,M3.5.0,M10.5.0/3"
